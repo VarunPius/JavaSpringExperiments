@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.5.0</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.vpiusr</groupId>
+	<artifactId>spring_data</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring_data</name>
+	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>16</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<!-- <plugin>
+				<groupId>io.fabric8</groupId>
+				<artifactId>docker-maven-plugin</artifactId>
+				<version>0.36.0</version>
+				<configuration>
+					<verbose>true</verbose>
+					<images>
+						<image>
+							<alias>mysql</alias>
+							<name>mysql:5.6</name>
+							<run>
+								<env>
+									<MYSQL_USER>root</MYSQL_USER>
+									<MYSQL_PASSWORD>test</MYSQL_PASSWORD>
+									<MYSQL_ROOT_PASSWORD>test</MYSQL_ROOT_PASSWORD>
+									<MYSQL_DATABASE>javadb</MYSQL_DATABASE>
+								</env>
+								<wait>
+									<log>MySQL init process done. Ready for start up.</log>
+									<!- - <log>mysqld: ready for connections</log> - ->
+									<time>80000</time>
+								</wait>
+								<ports>
+									<port>3306:3306</port>
+								</ports>
+							</run>
+						</image>
+					</images>
+				</configuration>
+				<executions>
+					<execution>
+						<id>start</id>
+						<phase>initialize</phase>
+						<goals>
+							<goal>start</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>stop</id>
+						<phase>post-integration-test</phase>
+						<goals>
+							<goal>stop</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin> -->
+
+		</plugins>
+	</build>
+
+</project>
