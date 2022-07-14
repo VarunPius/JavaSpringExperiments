@@ -63,7 +63,8 @@ $ kafka-console-producer --broker-list localhost:9092 --topic test
 
 Now we will initialize the Kafka consumer console, which will listen to bootstrap server localhost at port 9092 at topic test from beginning:
 ```
-$ kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginningsend first message
+$ kafka-console-consumer --bootstrap-server localhost:9092 --topic test --from-beginning
+send first message
 send second message
 wow it is working
 ```
